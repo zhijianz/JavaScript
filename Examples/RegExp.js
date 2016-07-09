@@ -1,12 +1,9 @@
-var re = null, i;
-var testStr = 'catastrophe';
+var text = "mom and dad and baby adksdkfsjk";
+var re = /mom( and dad( and baby)?)?/gi;
 
-for (var i = 0; i < 10; i++) {
-  re = /cat/g;
-  console.log(re.test(testStr));
-}
+var matches = re.exec(text);
 
-for (var i = 0; i < 10; i++) {
-  re = new RegExp('cat', 'g');
-  console.log(re.test(testStr));
-}
+console.log(matches.index);
+console.log(matches.input);
+console.log(matches.length);
+console.log(matches.toString());
